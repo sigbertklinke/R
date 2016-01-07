@@ -1,0 +1,1294 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.8/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.8/ http://www.mediawiki.org/xml/export-0.8.xsd" version="0.8" xml:lang="de">
+  <siteinfo>
+    <sitename>1_21_8</sitename>
+    <base>http://localhost:8081/mediawiki-1.21.8/index.php/Hauptseite</base>
+    <generator>MediaWiki 1.21.8</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Medium</namespace>
+      <namespace key="-1" case="first-letter">Spezial</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Diskussion</namespace>
+      <namespace key="2" case="first-letter">Benutzer</namespace>
+      <namespace key="3" case="first-letter">Benutzer Diskussion</namespace>
+      <namespace key="4" case="first-letter">1 21 8</namespace>
+      <namespace key="5" case="first-letter">1 21 8 Diskussion</namespace>
+      <namespace key="6" case="first-letter">Datei</namespace>
+      <namespace key="7" case="first-letter">Datei Diskussion</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki Diskussion</namespace>
+      <namespace key="10" case="first-letter">Vorlage</namespace>
+      <namespace key="11" case="first-letter">Vorlage Diskussion</namespace>
+      <namespace key="12" case="first-letter">Hilfe</namespace>
+      <namespace key="13" case="first-letter">Hilfe Diskussion</namespace>
+      <namespace key="14" case="first-letter">Kategorie</namespace>
+      <namespace key="15" case="first-letter">Kategorie Diskussion</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>R Extension</title>
+    <ns>0</ns>
+    <id>2</id>
+    <revision>
+      <id>23</id>
+      <parentid>21</parentid>
+      <timestamp>2014-05-01T11:04:46Z</timestamp>
+      <contributor>
+        <ip>10.0.2.2</ip>
+      </contributor>
+      <text xml:space="preserve" bytes="1377">There is a bunch of example pages for R and octave available:
+
+* '''Raw''': output from the program(s) as it is 
+* '''HTML''': some HTML output created by the program(s)
+* '''Graphics''': generate graphics from the program(s)
+* '''Mixed''': mixed text output and graphics from the program(s)
+* '''Wiki''': only MediaWiki output is created by the program(s)
+* '''Interaction''': hwo to use interactive programs
+
+{| class=&quot;wikitable&quot;
+|+ Example pages for different type of output
+!
+! Raw 
+! HTML 
+! Graphics
+! Mixed
+! Wiki
+! colspan=&quot;2&quot; | Interaction
+|- align=&quot;center&quot;
+! R
+| [[R Extension/R - Raw|Raw]] 
+| [[R Extension/R - HTML|HTML]]
+| [[R Extension/R - Graphics|Graphics]]
+| [[R Extension/R - Mixed|Mixed]] 
+| [[R Extension/R - Wiki|Wiki]]
+| [[R Extension/R - Interaction without jQuery|without jQuery]]    
+| [[R Extension/R - Interaction with jQuery|with jQuery]]    
+|- align=&quot;center&quot;
+! Octave
+| [[R Extension/Octave - Raw|Raw]] 
+| [[R Extension/Octave - HTML|HTML]]
+| [[R Extension/Octave - Graphics|Graphics]]
+| [[R Extension/Octave - Mixed|Mixed]] 
+| [[R Extension/Octave - Wiki|Wiki]]
+| [[R Extension/Octave - Interaction without jQuery|without jQuery]]    
+| [[R Extension/Octave - Interaction with jQuery|with jQuery]]  
+|}
+
+----
+
+'''Note''': The version 0.14 of the extension will not work properly with
+
+* MediaWiki version 1.21.x or older.
+
+----
+
+[[Category:ExtR]]</text>
+      <sha1>06bihex8fwkdhsqw8bwln6mn93lln5d</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>R Extension/R - Raw</title>
+    <ns>0</ns>
+    <id>3</id>
+    <revision>
+      <id>3</id>
+      <timestamp>2014-04-21T15:22:44Z</timestamp>
+      <contributor>
+        <ip>10.0.2.2</ip>
+      </contributor>
+      <text xml:space="preserve" bytes="2360">{| width=&quot;100%&quot;
+| align=&quot;left&quot;  | [[R Extension|&lt;&lt; Back to R Extension page]]
+| align=&quot;right&quot; | [http://mars.wiwi.hu-berlin.de/mediawiki/sk/index.php/R_Extension_for_MediaWiki R Extension documentation]
+|}
+
+{| width=&quot;100%&quot;
+|- bgcolor=&quot;#666666&quot;
+| colspan=&quot;4&quot; | '''Basic'''
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+| &lt;pre&gt;&lt;R&gt;1:10&lt;/R&gt;&lt;/pre&gt;
+| &lt;pre&gt;&lt;R echo&gt;1:10&lt;/R&gt;&lt;/pre&gt;
+| &lt;pre&gt;&lt;R echo=&quot;nogeshi&quot;&gt;1:10&lt;/R&gt;&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+| &lt;R&gt;1:10&lt;/R&gt;
+| &lt;R echo&gt;1:10&lt;/R&gt;
+| &lt;R echo=&quot;nogeshi&quot;&gt;1:10&lt;/R&gt;
+|- bgcolor=&quot;#666666&quot;
+| colspan=&quot;4&quot; | '''Iframe'''
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+| &lt;pre&gt;&lt;R iframe=&quot;width:300px;height:50px&quot;&gt;1:10&lt;/R&gt;&lt;/pre&gt;
+| &lt;pre&gt;&lt;R iframe=&quot;width:300px;height:50px&quot; echo&gt;1:10&lt;/R&gt;&lt;/pre&gt;
+| &lt;pre&gt;&lt;R iframe=&quot;width:300px;height:50px&quot; echo=&quot;nogeshi&quot;&gt;1:10&lt;/R&gt;&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+| &lt;R iframe=&quot;width:300px;height:50px;background-color:white;&quot;&gt;1:10&lt;/R&gt;
+| &lt;R iframe=&quot;width:300px;height:50px;background-color:white;&quot; echo&gt;1:10&lt;/R&gt;
+| &lt;R iframe=&quot;width:300px;height:50px;background-color:white;&quot; echo=&quot;nogeshi&quot;&gt;1:10&lt;/R&gt;
+|}
+
+{| width=&quot;100%&quot;
+|- bgcolor=&quot;#666666&quot;
+| colspan=&quot;3&quot; | '''Table'''
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+|
+&lt;pre&gt;&lt;R&gt;
+prob=0.15; nmin=1; nmax=7; x=6
+g &lt;- expand.grid(0:6, nmin:nmax)
+m &lt;- pbinom(g[,1], g[,2], prob)
+dim(m) &lt;- c(x+1, nmax-nmin+1)
+colnames(m) &lt;- format(nmin:nmax)
+rownames(m) &lt;- format(0:x)
+outMatrix(m, title='x-n', format=list(numeric='%.4f'))
+&lt;/R&gt;&lt;/pre&gt;
+|
+&lt;pre&gt;&lt;R echo&gt;
+prob=0.15; nmin=1; nmax=7; x=6
+g &lt;- expand.grid(0:6, nmin:nmax)
+m &lt;- pbinom(g[,1], g[,2], prob)
+dim(m) &lt;- c(x+1, nmax-nmin+1)
+colnames(m) &lt;- format(nmin:nmax)
+rownames(m) &lt;- format(0:x)
+outMatrix(m, title='x-n', format=list(numeric='%.4f'))
+&lt;/R&gt;&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+|
+&lt;R&gt;
+prob=0.15; nmin=1; nmax=7; x=6
+g &lt;- expand.grid(0:6, nmin:nmax)
+m &lt;- pbinom(g[,1], g[,2], prob)
+dim(m) &lt;- c(x+1, nmax-nmin+1)
+colnames(m) &lt;- format(nmin:nmax)
+rownames(m) &lt;- format(0:x)
+outMatrix(m, title='x-n', format=list(numeric='%.4f'))
+&lt;/R&gt;
+|
+&lt;R echo&gt;
+prob=0.15; nmin=1; nmax=7; x=6
+g &lt;- expand.grid(0:6, nmin:nmax)
+m &lt;- pbinom(g[,1], g[,2], prob)
+dim(m) &lt;- c(x+1, nmax-nmin+1)
+colnames(m) &lt;- format(nmin:nmax)
+rownames(m) &lt;- format(0:x)
+outMatrix(m, title='x-n', format=list(numeric='%.4f'))
+&lt;/R&gt;
+|}
+
+[[Category:ExtR]]</text>
+      <sha1>r1v46uh936jamqvvm4zeh7s5tnzfubx</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>R Extension/R - HTML</title>
+    <ns>0</ns>
+    <id>4</id>
+    <revision>
+      <id>4</id>
+      <timestamp>2014-04-21T15:23:02Z</timestamp>
+      <contributor>
+        <ip>10.0.2.2</ip>
+      </contributor>
+      <text xml:space="preserve" bytes="1497">{| width=&quot;100%&quot;
+| align=&quot;left&quot;  | [[R Extension|&lt;&lt; Back to R Extension page]]
+| align=&quot;right&quot; | [http://mars.wiwi.hu-berlin.de/mediawiki/sk/index.php/R_Extension_for_MediaWiki R Extension documentation]
+|}
+
+{| width=&quot;100%&quot;
+|- bgcolor=&quot;#666666&quot;
+| colspan=&quot;3&quot; | '''HTML'''
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+|
+&lt;pre&gt;&lt;R output=&quot;html&quot;&gt;
+prob=0.15; nmin=1; nmax=7; x=6
+g &lt;- expand.grid(0:6, nmin:nmax)
+m &lt;- pbinom(g[,1], g[,2], prob)
+dim(m) &lt;- c(x+1, nmax-nmin+1)
+colnames(m) &lt;- format(nmin:nmax)
+rownames(m) &lt;- format(0:x)
+outMatrix(m, title='x-n', format=list(numeric='%.4f'))
+&lt;/R&gt;&lt;/pre&gt;
+|
+&lt;pre&gt;&lt;R output=&quot;html&quot; echo&gt;
+prob=0.15; nmin=1; nmax=7; x=6
+g &lt;- expand.grid(0:6, nmin:nmax)
+m &lt;- pbinom(g[,1], g[,2], prob)
+dim(m) &lt;- c(x+1, nmax-nmin+1)
+colnames(m) &lt;- format(nmin:nmax)
+rownames(m) &lt;- format(0:x)
+outMatrix(m, title='x-n', format=list(numeric='%.4f'))
+&lt;/R&gt;&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+|
+&lt;R output=&quot;html&quot;&gt;
+prob=0.15; nmin=1; nmax=7; x=6
+g &lt;- expand.grid(0:6, nmin:nmax)
+m &lt;- pbinom(g[,1], g[,2], prob)
+dim(m) &lt;- c(x+1, nmax-nmin+1)
+colnames(m) &lt;- format(nmin:nmax)
+rownames(m) &lt;- format(0:x)
+outMatrix(m, title='x-n', format=list(numeric='%.4f'))
+&lt;/R&gt;
+|
+&lt;R  output=&quot;html&quot; echo&gt;
+prob=0.15; nmin=1; nmax=7; x=6
+g &lt;- expand.grid(0:6, nmin:nmax)
+m &lt;- pbinom(g[,1], g[,2], prob)
+dim(m) &lt;- c(x+1, nmax-nmin+1)
+colnames(m) &lt;- format(nmin:nmax)
+rownames(m) &lt;- format(0:x)
+outMatrix(m, title='x-n', format=list(numeric='%.4f'))
+&lt;/R&gt;
+|}
+
+[[Category:ExtR]]</text>
+      <sha1>je6v2i5w1as3ccuudw8b00how4d1bjr</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>R Extension/R - Graphics</title>
+    <ns>0</ns>
+    <id>5</id>
+    <revision>
+      <id>5</id>
+      <timestamp>2014-04-21T15:23:25Z</timestamp>
+      <contributor>
+        <ip>10.0.2.2</ip>
+      </contributor>
+      <text xml:space="preserve" bytes="733">{| width=&quot;100%&quot;
+| align=&quot;left&quot;  | [[R Extension|&lt;&lt; Back to R Extension page]]
+| align=&quot;right&quot; | [http://mars.wiwi.hu-berlin.de/mediawiki/sk/index.php/R_Extension_for_MediaWiki R Extension documentation]
+|}
+
+{| width=&quot;100%&quot;
+|- bgcolor=&quot;#666666&quot;
+| colspan=&quot;3&quot; | '''Graphics'''
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+|
+&lt;pre&gt;&lt;R output=&quot;display&quot;&gt;
+pdf(rpdf, width=3, height=3)
+plot(1:10, 1:10)
+&lt;/R&gt;&lt;/pre&gt;
+|
+&lt;pre&gt;&lt;R output=&quot;display&quot; echo&gt;
+pdf(rpdf, width=3, height=3)
+plot(1:10, 1:10)
+&lt;/R&gt;&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+|
+&lt;R output=&quot;display&quot;&gt;
+pdf(rpdf, width=3, height=3)
+plot(1:10, 1:10)
+&lt;/R&gt;
+|
+&lt;R  output=&quot;display&quot; echo&gt;
+pdf(rpdf, width=3, height=3)
+plot(1:10, 1:10)
+&lt;/R&gt;
+|}
+
+[[Category:ExtR]]</text>
+      <sha1>jpoxiv3dpcbbi4vnbce99d8a7damyea</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>R Extension/R - Mixed</title>
+    <ns>0</ns>
+    <id>6</id>
+    <revision>
+      <id>6</id>
+      <timestamp>2014-04-21T15:23:42Z</timestamp>
+      <contributor>
+        <ip>10.0.2.2</ip>
+      </contributor>
+      <text xml:space="preserve" bytes="933">{| width=&quot;100%&quot;
+| align=&quot;left&quot;  | [[R Extension|&lt;&lt; Back to R Extension page]]
+| align=&quot;right&quot; | [http://mars.wiwi.hu-berlin.de/mediawiki/sk/index.php/R_Extension_for_MediaWiki R Extension documentation]
+|}
+
+{| width=&quot;100%&quot;
+|- bgcolor=&quot;#666666&quot;
+| colspan=&quot;3&quot; | '''Mixed'''
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+|
+&lt;pre&gt;&lt;R&gt;
+t &lt;- 1:10
+t
+pdf(rpdf, width=3, height=3)
+plot(t,t)
+dev.off()
+-t
+pdf(rpdf, width=3, height=3)
+plot(t,-t)
+dev.off()
+&lt;/R&gt;&lt;/pre&gt;
+|
+&lt;pre&gt;&lt;R echo&gt;
+t &lt;- 1:10
+t
+pdf(rpdf, width=3, height=3)
+plot(t,t)
+dev.off()
+-t
+pdf(rpdf, width=3, height=3)
+plot(t,-t)
+dev.off()
+&lt;/R&gt;&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+|
+&lt;R&gt;
+t &lt;- 1:10
+t
+pdf(rpdf, width=3, height=3)
+plot(t,t)
+dev.off()
+-t
+pdf(rpdf, width=3, height=3)
+plot(t,-t)
+dev.off()
+&lt;/R&gt;
+|
+&lt;R echo&gt;
+t &lt;- 1:10
+t
+pdf(rpdf, width=3, height=3)
+plot(t,t)
+dev.off()
+-t
+pdf(rpdf, width=3, height=3)
+plot(t,-t)
+dev.off()
+&lt;/R&gt;
+|}
+
+[[Category:ExtR]]</text>
+      <sha1>rqdmvr4t76m2em69rln0g8ujxvpiyos</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>R Extension/R - Wiki</title>
+    <ns>0</ns>
+    <id>7</id>
+    <revision>
+      <id>7</id>
+      <timestamp>2014-04-21T15:23:56Z</timestamp>
+      <contributor>
+        <ip>10.0.2.2</ip>
+      </contributor>
+      <text xml:space="preserve" bytes="1025">{| width=&quot;100%&quot;
+| align=&quot;left&quot;  | [[R Extension|&lt;&lt; Back to R Extension page]]
+| align=&quot;right&quot; | [http://mars.wiwi.hu-berlin.de/mediawiki/sk/index.php/R_Extension_for_MediaWiki R Extension documentation]
+|}
+
+{| width=&quot;100%&quot;
+|- bgcolor=&quot;#666666&quot;
+| colspan=&quot;3&quot; | '''Wiki'''
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+|
+&lt;pre&gt;&lt;R output=&quot;wiki&quot;&gt;
+x&lt;-matrix(1:12,ncol=3)
+rownames(x) &lt;- sprintf(&quot;row %i&quot;, 1:4)
+colnames(x) &lt;- sprintf(&quot;col %i&quot;, 1:3)
+outMatrix(x, title=&quot;x&quot;)
+&lt;/R&gt;&lt;/pre&gt;
+|
+&lt;pre&gt;&lt;R output=&quot;wiki&quot; echo&gt;
+x&lt;-matrix(1:12,ncol=3)
+rownames(x) &lt;- sprintf(&quot;row %i&quot;, 1:4)
+colnames(x) &lt;- sprintf(&quot;col %i&quot;, 1:3)
+outMatrix(x, title=&quot;x&quot;)
+&lt;/R&gt;&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+|
+&lt;R output=&quot;wiki&quot;&gt;
+x&lt;-matrix(1:12,ncol=3)
+rownames(x) &lt;- sprintf(&quot;row %i&quot;, 1:4)
+colnames(x) &lt;- sprintf(&quot;col %i&quot;, 1:3)
+outMatrix(x, title=&quot;x&quot;)
+&lt;/R&gt;
+|
+&lt;R  output=&quot;wiki&quot; echo&gt;
+x&lt;-matrix(1:12,ncol=3)
+rownames(x) &lt;- sprintf(&quot;row %i&quot;, 1:4)
+colnames(x) &lt;- sprintf(&quot;col %i&quot;, 1:3)
+outMatrix(x, title=&quot;x&quot;)
+&lt;/R&gt;
+|}
+
+[[Category:ExtR]]</text>
+      <sha1>l0if1fu98y809cf6sf030dae1nnck6q</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>R Extension/R - Interaction without jQuery</title>
+    <ns>0</ns>
+    <id>8</id>
+    <revision>
+      <id>8</id>
+      <timestamp>2014-04-21T15:24:10Z</timestamp>
+      <contributor>
+        <ip>10.0.2.2</ip>
+      </contributor>
+      <text xml:space="preserve" bytes="2030">{| width=&quot;100%&quot;
+| align=&quot;left&quot;  | [[R Extension|&lt;&lt; Back to R Extension page]]
+| align=&quot;right&quot; | [http://mars.wiwi.hu-berlin.de/mediawiki/sk/index.php/R_Extension_for_MediaWiki R Extension documentation]
+|}
+
+{| width=&quot;100%&quot;
+|- bgcolor=&quot;#666666&quot;
+| colspan=&quot;3&quot; | '''Wiki'''
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+|
+&lt;pre&gt;&lt;Rform name=&quot;test1&quot; jquery=&quot;0&quot;&gt;
+from: &lt;Rinput name=&quot;from&quot; type=&quot;text&quot; size=&quot;5&quot; value=&quot;1&quot; /&gt;  
+to: &lt;Rinput name=&quot;to&quot; type=&quot;text&quot; size=&quot;5&quot; value=&quot;10&quot; /&gt;  
+&lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt;  
+&lt;/Rform&gt;
+
+&lt;R  name=&quot;test1&quot;&gt;
+if (exists(&quot;from&quot;)) from &lt;- as.numeric(from) else from &lt;- 1
+if (exists(&quot;to&quot;)) to &lt;- as.numeric(to) else to &lt;- 10
+from:to
+&lt;/R&gt;&lt;/pre&gt;
+|
+&lt;pre&gt;&lt;Rform name=&quot;test3&quot; jquery=&quot;0&quot;&gt;
+from: &lt;Rinput name=&quot;from&quot; type=&quot;text&quot; size=&quot;5&quot; value=&quot;1&quot; /&gt; 
+to: &lt;Rinput name=&quot;to&quot; type=&quot;text&quot; size=&quot;5&quot; value=&quot;10&quot; /&gt;  
+&lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt; 
+&lt;/Rform&gt; 
+
+&lt;R  name=&quot;test3&quot;  iframe=&quot;width:100%;height:150px&quot; echo&gt;
+if (exists(&quot;from&quot;)) from &lt;- as.numeric(from) else from &lt;- 1
+if (exists(&quot;to&quot;)) to &lt;- as.numeric(to) else to &lt;- 10
+from:to 
+&lt;/R&gt;&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+|
+&lt;Rform name=&quot;test1&quot; jquery=&quot;0&quot;&gt;
+from: &lt;Rinput name=&quot;from&quot; type=&quot;text&quot; size=&quot;5&quot; value=&quot;1&quot; /&gt; 
+to: &lt;Rinput name=&quot;to&quot; type=&quot;text&quot; size=&quot;5&quot; value=&quot;10&quot; /&gt; 
+&lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt;  
+&lt;/Rform&gt;
+
+&lt;R  name=&quot;test1&quot;&gt;
+if (exists(&quot;from&quot;)) from &lt;- as.numeric(from) else from &lt;- 1
+if (exists(&quot;to&quot;)) to &lt;- as.numeric(to) else to &lt;- 10
+from:to
+&lt;/R&gt;
+
+&lt;span style=&quot;color:red&quot;&gt;Note: Any press on the '''Submit''' button will create an error!&lt;/span&gt;
+|
+&lt;Rform name=&quot;test3&quot; jquery=&quot;0&quot;&gt;
+from: &lt;Rinput name=&quot;from&quot; type=&quot;text&quot; size=&quot;5&quot; value=&quot;1&quot; /&gt; 
+to: &lt;Rinput name=&quot;to&quot; type=&quot;text&quot; size=&quot;5&quot; value=&quot;10&quot; /&gt; 
+&lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt; 
+&lt;/Rform&gt; 
+
+&lt;R  name=&quot;test3&quot;  iframe=&quot;width:100%;height:150px;background-color:white;&quot; echo&gt;
+if (exists(&quot;from&quot;)) from &lt;- as.numeric(from) else from &lt;- 1
+if (exists(&quot;to&quot;)) to &lt;- as.numeric(to) else to &lt;- 10
+from:to 
+&lt;/R&gt;
+|}
+
+[[Category:ExtR]]</text>
+      <sha1>8btzjpqrdowwxcbxkrkweajj9zeosqq</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>R Extension/R - Interaction with jQuery</title>
+    <ns>0</ns>
+    <id>9</id>
+    <revision>
+      <id>17</id>
+      <parentid>9</parentid>
+      <timestamp>2014-05-01T08:41:36Z</timestamp>
+      <contributor>
+        <ip>10.0.2.2</ip>
+      </contributor>
+      <text xml:space="preserve" bytes="6500">{| width=&quot;100%&quot;
+| align=&quot;left&quot;  | [[R Extension|&lt;&lt; Back to R Extension page]]
+| align=&quot;right&quot; | [http://mars.wiwi.hu-berlin.de/mediawiki/sk/index.php/R_Extension_for_MediaWiki R Extension documentation]
+|-
+! colspan=&quot;2&quot; | For the use use of jQuery the Mediawiki version 1.22.x or higher is required: your MediaWiki version is {{CURRENTVERSION}} !
+|}
+
+{| width=&quot;100%&quot;
+|- bgcolor=&quot;#666666&quot;
+| colspan=&quot;3&quot; | '''Wiki'''
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+|
+&lt;pre&gt;&lt;Rform name=&quot;test13&quot;&gt;
+{|
+| to: 
+| &lt;Rinput type=&quot;slider&quot; value=&quot;10&quot; style=&quot;width:150px;&quot; max=&quot;50&quot; size=&quot;200&quot; name=&quot;slito&quot; submit=&quot;stop&quot; /&gt;
+| &lt;Rinput name=&quot;slito_0&quot; type=&quot;text&quot; size=&quot;3&quot; readonly /&gt;
+| &lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt;
+|}
+&lt;/Rform&gt; 
+
+&lt;R  name=&quot;test13&quot;  iframe=&quot;width:95%;height:150px;background-color:white;&quot; echo&gt;
+if (exists(&quot;slito&quot;)) to &lt;- as.numeric(slito) else to &lt;- 10
+0:to 
+&lt;/R&gt;&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''q
+|
+&lt;Rform name=&quot;test13&quot;&gt;
+{|
+| to: 
+| &lt;Rinput type=&quot;slider&quot; value=&quot;10&quot; style=&quot;width:150px;&quot; max=&quot;50&quot; size=&quot;200&quot; name=&quot;slito&quot; submit=&quot;stop&quot; /&gt;
+| &lt;Rinput name=&quot;slito_0&quot; type=&quot;text&quot; size=&quot;3&quot; readonly /&gt;
+| &lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt;
+|}
+&lt;/Rform&gt; 
+
+&lt;R  name=&quot;test13&quot;  iframe=&quot;width:95%;height:150px;background-color:white;&quot; echo&gt;
+if (exists(&quot;slito&quot;)) to &lt;- as.numeric(slito) else to &lt;- 10
+0:to 
+&lt;/R&gt;
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+|
+&lt;pre&gt;&lt;Rform name=&quot;test14&quot;&gt;
+{|
+| from: &lt;Rinput name=&quot;sli_0&quot; type=&quot;text&quot; size=&quot;3&quot; readonly /&gt;
+| &lt;Rinput type=&quot;slider&quot; style=&quot;width:150px;&quot; max=&quot;50&quot; range values=&quot;1 10&quot; name=&quot;sli&quot; /&gt;
+| to: &lt;Rinput name=&quot;sli_1&quot; type=&quot;text&quot; size=&quot;3&quot; readonly /&gt;
+| &lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt;
+|}
+&lt;/Rform&gt; 
+
+&lt;R  name=&quot;test14&quot;  iframe=&quot;width:95%;height:150px;background-color:white;&quot; echo&gt;
+if (exists(&quot;sli_0&quot;)) from &lt;- as.numeric(sli_0) else from &lt;- 1
+if (exists(&quot;sli_1&quot;)) to &lt;- as.numeric(sli_1) else to &lt;- 10
+from:to
+&lt;/R&gt;&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+|
+&lt;Rform name=&quot;test14&quot;&gt;
+{|
+| from: &lt;Rinput name=&quot;sli_0&quot; type=&quot;text&quot; size=&quot;3&quot; readonly /&gt;
+| &lt;Rinput type=&quot;slider&quot; style=&quot;width:150px;&quot; max=&quot;50&quot; range values=&quot;1 10&quot; name=&quot;sli&quot; /&gt;
+| to: &lt;Rinput name=&quot;sli_1&quot; type=&quot;text&quot; size=&quot;3&quot; readonly /&gt;
+| &lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt;
+|}
+&lt;/Rform&gt; 
+
+&lt;R  name=&quot;test14&quot;  iframe=&quot;width:95%;height:150px;background-color:white;&quot; echo&gt;
+if (exists(&quot;sli_0&quot;)) from &lt;- as.numeric(sli_0) else from &lt;- 1
+if (exists(&quot;sli_1&quot;)) to &lt;- as.numeric(sli_1) else to &lt;- 10
+from:to
+&lt;/R&gt;
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+|
+&lt;pre&gt;&lt;Rform name=&quot;test15&quot;&gt;
+{|
+| &lt;Rinput type=&quot;checkbox&quot; name=&quot;even&quot; /&gt; even numbers
+| &lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt;
+|}
+&lt;/Rform&gt; 
+
+&lt;R  name=&quot;test15&quot;  iframe=&quot;width:95%;height:150px;background-color:white;&quot; echo&gt;
+even &lt;- exists(&quot;even&quot;)
+even
+sequ &lt;- 1:10
+if (even) sequ &lt;- 2*sequ
+sequ
+&lt;/R&gt;&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+|
+&lt;Rform name=&quot;test15&quot;&gt;
+{|
+| &lt;Rinput type=&quot;checkbox&quot; name=&quot;even&quot; /&gt; even numbers
+| &lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt;
+|}
+&lt;/Rform&gt; 
+
+&lt;R  name=&quot;test15&quot;  iframe=&quot;width:95%;height:150px;background-color:white;&quot; echo&gt;
+even &lt;- exists(&quot;even&quot;)
+even
+sequ &lt;- 1:10
+if (even) sequ &lt;- 2*sequ
+sequ
+&lt;/R&gt;
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+|
+&lt;pre&gt;&lt;Rform name=&quot;test16&quot;&gt;
+{|
+| &lt;Rinput type=&quot;radio&quot; name=&quot;choice&quot; value=&quot;First choice&quot; checked /&gt; First choice
+| &lt;Rinput type=&quot;radio&quot; name=&quot;choice&quot; value=&quot;Second choice&quot; /&gt; Second choice
+| &lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt;
+|}
+&lt;/Rform&gt; 
+
+&lt;R  name=&quot;test16&quot;  iframe=&quot;width:95%;height:150px;background-color:white;&quot; echo&gt;
+if (!exists(&quot;choice&quot;)) choice &lt;- &quot;First choice&quot;
+choice
+&lt;/R&gt;&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+|
+&lt;Rform name=&quot;test16&quot;&gt;
+{|
+| &lt;Rinput type=&quot;radio&quot; name=&quot;choice&quot; value=&quot;First choice&quot; checked /&gt; First choice
+| &lt;Rinput type=&quot;radio&quot; name=&quot;choice&quot; value=&quot;Second choice&quot; /&gt; Second choice
+| &lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt;
+|}
+&lt;/Rform&gt; 
+
+&lt;R  name=&quot;test16&quot;  iframe=&quot;width:95%;height:150px;background-color:white;&quot; echo&gt;
+if (!exists(&quot;choice&quot;)) choice &lt;- &quot;First choice&quot;
+choice
+&lt;/R&gt;
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+|
+&lt;pre&gt;
+&lt;Rform name=&quot;test17&quot;&gt;
+{|
+| from: &lt;Rinput name=&quot;sli_0&quot; type=&quot;text&quot; size=&quot;3&quot; readonly /&gt;
+| &lt;Rinput type=&quot;slider&quot; style=&quot;width:150px;&quot; max=&quot;50&quot; range values=&quot;1 10&quot; name=&quot;sli&quot; /&gt;
+| to: &lt;Rinput name=&quot;sli_1&quot; type=&quot;text&quot; size=&quot;3&quot; readonly /&gt;
+| &lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt;
+| &lt;Rinput type=&quot;reset&quot; value=&quot; Reset &quot; /&gt;
+|}
+&lt;/Rform&gt; 
+
+&lt;R  name=&quot;test17&quot;  iframe=&quot;width:95%;height:150px;background-color:white;&quot; echo&gt;
+if (exists(&quot;sli_0&quot;)) from &lt;- as.numeric(sli_0) else from &lt;- 1
+if (exists(&quot;sli_1&quot;)) to &lt;- as.numeric(sli_1) else to &lt;- 10
+from:to
+&lt;/R&gt;
+&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+|
+&lt;Rform name=&quot;test17&quot;&gt;
+{|
+| from: &lt;Rinput name=&quot;sli_0&quot; type=&quot;text&quot; size=&quot;3&quot; readonly /&gt;
+| &lt;Rinput type=&quot;slider&quot; style=&quot;width:150px;&quot; max=&quot;50&quot; range values=&quot;1 10&quot; name=&quot;sli&quot; /&gt;
+| to: &lt;Rinput name=&quot;sli_1&quot; type=&quot;text&quot; size=&quot;3&quot; readonly /&gt;
+| &lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt;
+| &lt;Rinput type=&quot;reset&quot; value=&quot; Reset &quot; /&gt;
+|}
+&lt;/Rform&gt; 
+
+&lt;R  name=&quot;test17&quot;  iframe=&quot;width:95%;height:150px;background-color:white;&quot; echo&gt;
+if (exists(&quot;sli_0&quot;)) from &lt;- as.numeric(sli_0) else from &lt;- 1
+if (exists(&quot;sli_1&quot;)) to &lt;- as.numeric(sli_1) else to &lt;- 10
+from:to
+&lt;/R&gt;
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+|
+&lt;pre&gt;&lt;Rform name=&quot;test18&quot; submit=&quot;change&quot;&gt;
+{|
+| from: &lt;Rinput name=&quot;sli_0&quot; type=&quot;text&quot; size=&quot;3&quot; readonly /&gt;
+| &lt;Rinput type=&quot;slider&quot; style=&quot;width:150px;&quot; max=&quot;50&quot; range values=&quot;1 10&quot; name=&quot;sli&quot; /&gt;
+| to: &lt;Rinput name=&quot;sli_1&quot; type=&quot;text&quot; size=&quot;3&quot; readonly /&gt;
+| &lt;Rinput type=&quot;reset&quot; value=&quot; Reset &quot; /&gt;
+|}
+&lt;/Rform&gt; 
+
+&lt;R  name=&quot;test18&quot;  iframe=&quot;width:95%;height:150px;background-color:white;&quot; echo&gt;
+if (exists(&quot;sli_0&quot;)) from &lt;- as.numeric(sli_0) else from &lt;- 1
+if (exists(&quot;sli_1&quot;)) to &lt;- as.numeric(sli_1) else to &lt;- 10
+from:to
+&lt;/R&gt;
+&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+|
+&lt;Rform name=&quot;test18&quot; submit=&quot;change&quot;&gt;
+{|
+| from: &lt;Rinput name=&quot;sli_0&quot; type=&quot;text&quot; size=&quot;3&quot; readonly /&gt;
+| &lt;Rinput type=&quot;slider&quot; style=&quot;width:150px;&quot; max=&quot;50&quot; range values=&quot;1 10&quot; name=&quot;sli&quot; /&gt;
+| to: &lt;Rinput name=&quot;sli_1&quot; type=&quot;text&quot; size=&quot;3&quot; readonly /&gt;
+| &lt;Rinput type=&quot;reset&quot; value=&quot; Reset &quot; /&gt;
+|}
+&lt;/Rform&gt; 
+
+&lt;R  name=&quot;test18&quot;  iframe=&quot;width:95%;height:150px;background-color:white;&quot; echo&gt;
+if (exists(&quot;sli_0&quot;)) from &lt;- as.numeric(sli_0) else from &lt;- 1
+if (exists(&quot;sli_1&quot;)) to &lt;- as.numeric(sli_1) else to &lt;- 10
+from:to
+&lt;/R&gt;
+|}
+
+[[Category:ExtR]]</text>
+      <sha1>72mrujueaalz2rfj4ncdmjozjlgola7</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>R Extension/Octave - Raw</title>
+    <ns>0</ns>
+    <id>10</id>
+    <revision>
+      <id>24</id>
+      <parentid>22</parentid>
+      <timestamp>2014-05-01T11:07:56Z</timestamp>
+      <contributor>
+        <ip>10.0.2.2</ip>
+      </contributor>
+      <text xml:space="preserve" bytes="1696">{| width=&quot;100%&quot;
+| align=&quot;left&quot;  | [[R Extension|&lt;&lt; Back to R Extension page]]
+| align=&quot;right&quot; | [http://mars.wiwi.hu-berlin.de/mediawiki/sk/index.php/R_Extension_for_MediaWiki R Extension documentation]
+|}
+
+{| width=&quot;100%&quot;
+|- bgcolor=&quot;#666666&quot;
+| colspan=&quot;4&quot; | '''Basic'''
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+| &lt;pre&gt;&lt;M&gt;1:10&lt;/M&gt;&lt;/pre&gt;
+| &lt;pre&gt;&lt;M echo&gt;1:10&lt;/M&gt;&lt;/pre&gt;
+| &lt;pre&gt;&lt;M echo=&quot;nogeshi&quot;&gt;1:10&lt;/M&gt;&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+| &lt;M&gt;1:10&lt;/M&gt;
+| &lt;M echo&gt;1:10&lt;/M&gt;
+| &lt;M echo=&quot;nogeshi&quot;&gt;1:10&lt;/M&gt;
+|- bgcolor=&quot;#666666&quot;
+| colspan=&quot;4&quot; | '''Iframe'''
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+| &lt;pre&gt;&lt;M iframe=&quot;width:300px;height:100px&quot;&gt;1:10&lt;/M&gt;&lt;/pre&gt;
+| &lt;pre&gt;&lt;M iframe=&quot;width:300px;height:100px&quot; echo&gt;1:10&lt;/M&gt;&lt;/pre&gt;
+| &lt;pre&gt;&lt;M iframe=&quot;width:300px;height:100px&quot; echo=&quot;nogeshi&quot;&gt;1:10&lt;/M&gt;&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+| &lt;M iframe=&quot;width:300px;height:100px;background-color:white;&quot;&gt;1:10&lt;/M&gt;
+| &lt;M iframe=&quot;width:300px;height:100px;background-color:white;&quot; echo&gt;1:10&lt;/M&gt;
+| &lt;M iframe=&quot;width:300px;height:100px;background-color:white;&quot; echo=&quot;nogeshi&quot;&gt;1:10&lt;/M&gt;
+|}
+
+{| width=&quot;100%&quot;
+|- bgcolor=&quot;#666666&quot;
+| colspan=&quot;3&quot; | '''Table'''
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+|
+&lt;pre&gt;&lt;M&gt;
+x=magic(5);
+outMatrix(x, &quot;title&quot;, &quot;magic(5)&quot;, &quot;format.numeric&quot;, &quot;%.0f&quot;);
+&lt;/M&gt;&lt;/pre&gt;
+|
+&lt;pre&gt;&lt;M echo&gt;
+x=magic(5);
+outMatrix(x, &quot;title&quot;, &quot;magic(5)&quot;, &quot;format.numeric&quot;, &quot;%.0f&quot;);
+&lt;/M&gt;&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+|
+&lt;M&gt;
+x=magic(5);
+outMatrix(x, &quot;title&quot;, &quot;magic(5)&quot;, &quot;format.numeric&quot;, &quot;%.0f&quot;); 
+&lt;/M&gt;
+|
+&lt;M echo&gt;
+x=magic(5);
+outMatrix(x, &quot;title&quot;, &quot;magic(5)&quot;, &quot;format.numeric&quot;, &quot;%.0f&quot;); 
+&lt;/M&gt;
+|}
+
+[[Category:ExtR]]</text>
+      <sha1>n61gatot0hntfi58f7n4evmqyg7b9rk</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>R Extension/Octave - HTML</title>
+    <ns>0</ns>
+    <id>11</id>
+    <revision>
+      <id>11</id>
+      <timestamp>2014-04-21T15:24:58Z</timestamp>
+      <contributor>
+        <ip>10.0.2.2</ip>
+      </contributor>
+      <text xml:space="preserve" bytes="825">{| width=&quot;100%&quot;
+| align=&quot;left&quot;  | [[R Extension|&lt;&lt; Back to R Extension page]]
+| align=&quot;right&quot; | [http://mars.wiwi.hu-berlin.de/mediawiki/sk/index.php/R_Extension_for_MediaWiki R Extension documentation]
+|}
+
+{| width=&quot;100%&quot;
+|- bgcolor=&quot;#666666&quot;
+| colspan=&quot;3&quot; | '''HTML'''
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+|
+&lt;pre&gt;&lt;M output=&quot;html&quot;&gt;
+x=magic(5);
+outMatrix(x, &quot;title&quot;, &quot;magic(5)&quot;, &quot;format.numeric&quot;, &quot;%.0f&quot;);
+&lt;/M&gt;&lt;/pre&gt;
+|
+&lt;pre&gt;&lt;M output=&quot;html&quot; echo&gt;
+x=magic(5);
+outMatrix(x, &quot;title&quot;, &quot;magic(5)&quot;, &quot;format.numeric&quot;, &quot;%.0f&quot;);
+&lt;/M&gt;&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+|
+&lt;M output=&quot;html&quot;&gt;
+x=magic(5);
+outMatrix(x, &quot;title&quot;, &quot;magic(5)&quot;, &quot;format.numeric&quot;, &quot;%.0f&quot;);
+&lt;/M&gt;
+|
+&lt;M  output=&quot;html&quot; echo&gt;
+x=magic(5);
+outMatrix(x, &quot;title&quot;, &quot;magic(5)&quot;, &quot;format.numeric&quot;, &quot;%.0f&quot;);
+&lt;/M&gt;
+|}
+
+[[Category:ExtR]]</text>
+      <sha1>j04yy4hjecqiqamzerh050l6kucu6on</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>R Extension/Octave - Graphics</title>
+    <ns>0</ns>
+    <id>12</id>
+    <revision>
+      <id>12</id>
+      <timestamp>2014-04-21T15:25:11Z</timestamp>
+      <contributor>
+        <ip>10.0.2.2</ip>
+      </contributor>
+      <text xml:space="preserve" bytes="993">{| width=&quot;100%&quot;
+| align=&quot;left&quot;  | [[R Extension|&lt;&lt; Back to R Extension page]]
+| align=&quot;right&quot; | [http://mars.wiwi.hu-berlin.de/mediawiki/sk/index.php/R_Extension_for_MediaWiki R Extension documentation]
+|}
+
+{| width=&quot;100%&quot;
+|- bgcolor=&quot;#666666&quot;
+| colspan=&quot;3&quot; | '''Graphics'''
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+|
+&lt;pre&gt;&lt;M output=&quot;display&quot;&gt;
+set (0, &quot;defaultlinelinewidth&quot;, 8);
+set (0, &quot;defaultaxeslinewidth&quot;, 7); 
+plot(1:10, 1:10);
+print(&quot;-S300,300&quot;);
+&lt;/M&gt;&lt;/pre&gt;
+|
+&lt;pre&gt;&lt;M output=&quot;display&quot; echo&gt;
+set (0, &quot;defaultlinelinewidth&quot;, 8);
+set (0, &quot;defaultaxeslinewidth&quot;, 7); 
+plot(1:10, 1:10);
+print(&quot;-S300,300&quot;);
+&lt;/M&gt;&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+|
+&lt;M output=&quot;display&quot;&gt;
+set (0, &quot;defaultlinelinewidth&quot;, 8);
+set (0, &quot;defaultaxeslinewidth&quot;, 7); 
+plot(1:10, 1:10);
+print(&quot;-S300,300&quot;);
+&lt;/M&gt;
+|
+&lt;M  output=&quot;display&quot; echo&gt;
+set (0, &quot;defaultlinelinewidth&quot;, 8);
+set (0, &quot;defaultaxeslinewidth&quot;, 7); 
+plot(1:10, 1:10);
+print(&quot;-S300,300&quot;);
+&lt;/M&gt;
+|}
+
+[[Category:ExtR]]</text>
+      <sha1>82brijs05wn8wluzei6w1j8e1jys27d</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>R Extension/Octave - Mixed</title>
+    <ns>0</ns>
+    <id>13</id>
+    <revision>
+      <id>25</id>
+      <parentid>13</parentid>
+      <timestamp>2014-05-01T11:22:23Z</timestamp>
+      <contributor>
+        <ip>10.0.2.2</ip>
+      </contributor>
+      <text xml:space="preserve" bytes="1183">{| width=&quot;100%&quot;
+| align=&quot;left&quot;  | [[R Extension|&lt;&lt; Back to R Extension page]]
+| align=&quot;right&quot; | [http://mars.wiwi.hu-berlin.de/mediawiki/sk/index.php/R_Extension_for_MediaWiki R Extension documentation]
+|}
+
+{| width=&quot;100%&quot;
+|- bgcolor=&quot;#666666&quot;
+| colspan=&quot;3&quot; | '''Mixed'''
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+|
+&lt;pre&gt;&lt;M&gt;
+t = 1:10;
+disp(t);
+set (0, &quot;defaultlinelinewidth&quot;, 5);
+set (0, &quot;defaultaxeslinewidth&quot;, 5);
+plot(t,t);
+print(rpdf, &quot;-S300,300&quot;);
+disp(-t);
+plot(t,-t);
+print(rpdf, &quot;-S300,300&quot;);
+&lt;/M&gt;&lt;/pre&gt;
+|
+&lt;pre&gt;&lt;M echo&gt;
+t = 1:10;
+disp(t);
+set (0, &quot;defaultlinelinewidth&quot;, 5);
+set (0, &quot;defaultaxeslinewidth&quot;, 5);
+plot(t,t);
+print(rpdf, &quot;-S300,300&quot;);
+disp(-t);
+plot(t,-t);
+print(rpdf, &quot;-S300,300&quot;);
+&lt;/M&gt;&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+|
+&lt;M&gt;
+t = 1:10;
+disp(t);
+set (0, &quot;defaultlinelinewidth&quot;, 5);
+set (0, &quot;defaultaxeslinewidth&quot;, 5);
+plot(t,t);
+print(rpdf, &quot;-S300,300&quot;);
+disp(-t);
+plot(t,-t);
+print(rpdf, &quot;-S300,300&quot;); 
+&lt;/M&gt;
+|
+&lt;M echo&gt;
+t = 1:10;
+disp(t);
+set (0, &quot;defaultlinelinewidth&quot;, 5);
+set (0, &quot;defaultaxeslinewidth&quot;, 5);
+plot(t,t);
+print(rpdf, &quot;-S300,300&quot;);
+disp(-t);
+plot(t,-t);
+print(rpdf, &quot;-S300,300&quot;); 
+&lt;/M&gt;
+|}
+
+[[Category:ExtR]]</text>
+      <sha1>35tnrruq3jhn0wxa8pbkxkp8c1751yt</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>R Extension/Octave - Wiki</title>
+    <ns>0</ns>
+    <id>14</id>
+    <revision>
+      <id>14</id>
+      <timestamp>2014-04-21T15:25:35Z</timestamp>
+      <contributor>
+        <ip>10.0.2.2</ip>
+      </contributor>
+      <text xml:space="preserve" bytes="841">{| width=&quot;100%&quot;
+| align=&quot;left&quot;  | [[R Extension|&lt;&lt; Back to R Extension page]]
+| align=&quot;right&quot; | [http://mars.wiwi.hu-berlin.de/mediawiki/sk/index.php/R_Extension_for_MediaWiki R Extension documentation]
+|}
+
+{| width=&quot;100%&quot;
+|- bgcolor=&quot;#666666&quot;
+| colspan=&quot;3&quot; | '''Wiki'''
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+|
+&lt;pre&gt;&lt;M output=&quot;wiki&quot;&gt;
+x = magic(4);
+outMatrix(x, 'title', 'magic(4)', 'format.numeric', {'%.0f'});
+&lt;/M&gt;&lt;/pre&gt;
+|
+&lt;pre&gt;&lt;M output=&quot;wiki&quot; echo&gt;
+x = magic(4);
+outMatrix(x, 'title', 'magic(4)', 'format.numeric', {'%.0f'});
+&lt;/M&gt;&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+|
+&lt;M output=&quot;wiki&quot;&gt;
+x = magic(4);
+outMatrix(x, 'title', 'magic(4)', 'format.numeric', {'%.0f'});
+&lt;/M&gt;
+|
+&lt;M  output=&quot;wiki&quot; echo&gt;
+x = magic(4);
+outMatrix(x, 'title', 'magic(4)', 'format.numeric', {'%.0f'});
+&lt;/M&gt;
+|}
+
+[[Category:ExtR]]</text>
+      <sha1>fkre0tnq8ea72onp3lmpalp3yf3y2xw</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>R Extension/Octave - Interaction without jQuery</title>
+    <ns>0</ns>
+    <id>15</id>
+    <revision>
+      <id>15</id>
+      <timestamp>2014-04-21T15:25:48Z</timestamp>
+      <contributor>
+        <ip>10.0.2.2</ip>
+      </contributor>
+      <text xml:space="preserve" bytes="2129">{| width=&quot;100%&quot;
+| align=&quot;left&quot;  | [[R Extension|&lt;&lt; Back to R Extension page]]
+| align=&quot;right&quot; | [http://mars.wiwi.hu-berlin.de/mediawiki/sk/index.php/R_Extension_for_MediaWiki R Extension documentation]
+|}
+
+{| width=&quot;100%&quot;
+|- bgcolor=&quot;#666666&quot;
+| colspan=&quot;3&quot; | '''Wiki'''
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+|
+&lt;pre&gt;&lt;Rform name=&quot;test1&quot; jquery=&quot;0&quot;&gt;
+from: &lt;Rinput name=&quot;from&quot; type=&quot;text&quot; size=&quot;5&quot; value=&quot;1&quot; /&gt;  
+to: &lt;Rinput name=&quot;to&quot; type=&quot;text&quot; size=&quot;5&quot; value=&quot;10&quot; /&gt;  
+&lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt;  
+&lt;/Rform&gt;
+
+&lt;M name=&quot;test1&quot;&gt;
+if (exist(&quot;from&quot;, &quot;var&quot;)) 
+  from = str2double(from);
+else
+  from = 1;
+end
+if (exist(&quot;to&quot;, &quot;var&quot;))
+  to = str2double(to);
+else
+  to = 10;
+end
+from:to
+&lt;/M&gt;&lt;/pre&gt;
+|
+&lt;pre&gt;&lt;Rform name=&quot;test3&quot; jquery=&quot;0&quot;&gt;
+from: &lt;Rinput name=&quot;from&quot; type=&quot;text&quot; size=&quot;5&quot; value=&quot;1&quot; /&gt; 
+to: &lt;Rinput name=&quot;to&quot; type=&quot;text&quot; size=&quot;5&quot; value=&quot;10&quot; /&gt;  
+&lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt; 
+&lt;/Rform&gt; 
+
+&lt;M name=&quot;test3&quot; iframe=&quot;width:100%;height:150px&quot;&gt;
+if (exist(&quot;from&quot;, &quot;var&quot;)) 
+  from = str2double(from);
+else
+  from = 1;
+end
+if (exist(&quot;to&quot;, &quot;var&quot;))
+  to = str2double(to);
+else
+  to = 10;
+end
+from:to
+&lt;/M&gt;&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+|
+&lt;Rform name=&quot;test2&quot; jquery=&quot;0&quot;&gt;
+from: &lt;Rinput name=&quot;from&quot; type=&quot;text&quot; size=&quot;5&quot; value=&quot;1&quot; /&gt; 
+to: &lt;Rinput name=&quot;to&quot; type=&quot;text&quot; size=&quot;5&quot; value=&quot;10&quot; /&gt; 
+&lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt;  
+&lt;/Rform&gt;
+
+&lt;M name=&quot;test2&quot;&gt;
+if (exist(&quot;from&quot;, &quot;var&quot;)) 
+  from = str2double(from);
+else
+  from = 1;
+end
+if (exist(&quot;to&quot;, &quot;var&quot;))
+  to = str2double(to);
+else
+  to = 10;
+end
+from:to
+&lt;/M&gt;
+
+&lt;span style=&quot;color:red&quot;&gt;Note: Any press on the '''Submit''' button will create an error!&lt;/span&gt;
+|
+&lt;Rform name=&quot;test4&quot; jquery=&quot;0&quot;&gt;
+from: &lt;Rinput name=&quot;from&quot; type=&quot;text&quot; size=&quot;5&quot; value=&quot;1&quot; /&gt; 
+to: &lt;Rinput name=&quot;to&quot; type=&quot;text&quot; size=&quot;5&quot; value=&quot;10&quot; /&gt; 
+&lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt; 
+&lt;/Rform&gt; 
+
+&lt;M name=&quot;test4&quot;  iframe=&quot;width:100%;height:150px;background-color:white;&quot;&gt;
+if (exist(&quot;from&quot;, &quot;var&quot;)) 
+  from = str2double(from);
+else
+  from = 1;
+end
+if (exist(&quot;to&quot;, &quot;var&quot;))
+  to = str2double(to);
+else
+  to = 10;
+end
+from:to
+&lt;/M&gt;
+|}
+
+[[Category:ExtR]]</text>
+      <sha1>5ob8k7voff9ouk9pphc9lbwfss7zijh</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>R Extension/Octave - Interaction with jQuery</title>
+    <ns>0</ns>
+    <id>16</id>
+    <revision>
+      <id>18</id>
+      <parentid>16</parentid>
+      <timestamp>2014-05-01T08:41:57Z</timestamp>
+      <contributor>
+        <ip>10.0.2.2</ip>
+      </contributor>
+      <text xml:space="preserve" bytes="2190">{| width=&quot;100%&quot;
+| align=&quot;left&quot;  | [[R Extension|&lt;&lt; Back to R Extension page]]
+| align=&quot;right&quot; | [http://mars.wiwi.hu-berlin.de/mediawiki/sk/index.php/R_Extension_for_MediaWiki R Extension documentation]
+|-
+! colspan=&quot;2&quot; | For the use use of jQuery the Mediawiki version 1.22.x or higher is required: your MediaWiki version is {{CURRENTVERSION}} !
+|}
+
+{| width=&quot;100%&quot;
+|- bgcolor=&quot;#666666&quot;
+| colspan=&quot;3&quot; | '''Wiki'''
+|- bgcolor=&quot;#999999&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Edit view''
+|
+&lt;pre&gt;&lt;Rform name=&quot;test22&quot;&gt;
+n: &lt;Rinput name=&quot;n&quot; type=&quot;text&quot; size=&quot;5&quot; value=&quot;4&quot; /&gt; 
+&lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt;  
+&lt;/Rform&gt;
+
+&lt;M name=&quot;test22&quot; iframe=&quot;width:400px;&quot;&gt;
+if (exist(&quot;n&quot;, &quot;var&quot;)) 
+  n = str2double(n);
+else
+  n = 4;
+end
+x    = magic(n);
+main = sprintf(&quot;magic(%i)&quot;, n);
+outMatrix (x, 'title', main, 
+           'format.numeric', {'%.0f'});
+&lt;/M&gt;&lt;/pre&gt;
+|
+&lt;pre&gt;&lt;Rform name=&quot;test23&quot;&gt;
+{|
+| n: 
+| &lt;Rinput type=&quot;text&quot; name=&quot;n_0&quot; size=&quot;3&quot; readonly /&gt;
+| &lt;Rinput type=&quot;slider&quot; name=&quot;n&quot; value=&quot;4&quot; 
+          style=&quot;width:250px;&quot; /&gt; 
+| &lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt;  
+|}
+&lt;/Rform&gt;
+
+&lt;M name=&quot;test23&quot; iframe=&quot;width:400px;&quot;&gt;
+if (exist(&quot;n&quot;, &quot;var&quot;)) 
+  n = str2double(n);
+else
+  n = 4;
+end
+x    = magic(n);
+main = sprintf(&quot;magic(%i)&quot;, n);
+outMatrix (x, 'title', main, 
+           'format.numeric', {'%.0f'});
+&lt;/M&gt;&lt;/pre&gt;
+|- bgcolor=&quot;#CCCCCC&quot; valign=&quot;top&quot;
+| &lt;br&gt;''Page view''
+|
+&lt;Rform name=&quot;test22&quot;&gt;
+n: &lt;Rinput name=&quot;n&quot; type=&quot;text&quot; size=&quot;5&quot; value=&quot;4&quot; /&gt; 
+&lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt;  
+&lt;/Rform&gt;
+
+&lt;M name=&quot;test22&quot; iframe=&quot;width:400px;&quot;&gt;
+if (exist(&quot;n&quot;, &quot;var&quot;)) 
+  n = str2double(n);
+else
+  n = 4;
+end
+x    = magic(n);
+main = sprintf(&quot;magic(%i)&quot;, n);
+outMatrix (x, 'title', main, 
+           'format.numeric', {'%.0f'});
+&lt;/M&gt;
+|
+&lt;Rform name=&quot;test23&quot;&gt;
+{|
+| n: 
+| &lt;Rinput type=&quot;text&quot; name=&quot;n_0&quot; size=&quot;3&quot; readonly /&gt;
+| &lt;Rinput type=&quot;slider&quot; name=&quot;n&quot; value=&quot;4&quot; 
+          style=&quot;width:250px;&quot; /&gt; 
+| &lt;Rinput type=&quot;submit&quot; value=&quot; Submit &quot; /&gt;  
+|}
+&lt;/Rform&gt;
+
+&lt;M name=&quot;test23&quot; iframe=&quot;width:400px;&quot;&gt;
+if (exist(&quot;n&quot;, &quot;var&quot;)) 
+  n = str2double(n);
+else
+  n = 4;
+end
+x    = magic(n);
+main = sprintf(&quot;magic(%i)&quot;, n);
+outMatrix (x, 'title', main, 
+           'format.numeric', {'%.0f'});
+&lt;/M&gt;
+|}
+
+[[Category:ExtR]]</text>
+      <sha1>h1f4p38jhbw52b2uyu6pzr694iemts8</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+</mediawiki>
